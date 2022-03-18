@@ -3,21 +3,19 @@ import React from 'react'
 const Login = () => {
   return (
     <div className="login">
-      <div className="wrapper">
-        
-        <div className="login-description">
-          <h3>Create a new password</h3>
-          <p>Enter a new password for your account</p>
-        </div>
-        <form action="" className="login-form">
-          <label htmlFor="userName">User</label>
-          <input type="text" name="userName" id="userName" placeholder="John Doe"/>
-          <label htmlFor="password">Password</label>
-          <input type="password" id="password" placeholder="********"/>
-          <button type="submit">Confirm</button>
-        </form>
-      </div>
+    <div className="form-container">
+      <img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
+      <form action="/" className="form">
+        <label htmlFor="email" className="label">Email address</label>
+        <input type="text" id="email" placeholder="platzi@example.cm" className="input input-email" />
+        <label htmlFor="password" className="label">Password</label>
+        <input type="password" id="password" placeholder="*********" className="input input-password" />
+        <input type="submit" defaultValue="Log in" className="primary-button login-button" />
+        <a href="/">Forgot my password</a>
+      </form>
+      <button className="secondary-button signup-button">Sign up</button>
     </div>
+  </div>
   )
 }
 
