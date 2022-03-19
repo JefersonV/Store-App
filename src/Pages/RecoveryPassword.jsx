@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RecoverPassword = () => {
+const RecoveryPassword = () => {
   return (
     <div className="recover">
       <div className="wrapper">
@@ -21,4 +21,4 @@ const RecoverPassword = () => {
   )
 }
 
-export default RecoverPassword
+export default RecoveryPassword
