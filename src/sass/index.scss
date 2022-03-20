@@ -8,6 +8,13 @@
   --md: 16px;
   --lg: 18px;
 }
+body {
+  background-color:  #eee;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
 /* Modules */
 @import './LoginRegister.scss';
 @import './Login.scss';
@@ -21,7 +28,3 @@
 @import './OrderActions.scss';
 @import './Cards.scss';
 @import './MyAccount.scss';
-
-body {
-  background-color:  #eee;
-}

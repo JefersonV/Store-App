@@ -1,12 +1,14 @@
 import React from 'react'
+// import iconMenu from '../assets/icons/icon_menu.svg'
+import logoYard from '../assets/logos/logo_yard_sale.svg';
 
 const Header = () => {
   return (
  <header>
   <nav>
-    <img src="./icons/icon_menu.svg" alt="menu" className="menu" />
+    <img src="" alt="menu" className="menu" />
     <div className="navbar-left">
-      <img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
+      <img src={logoYard} alt="logo" className="nav-logo" />
       <ul>
         <li>
           <a href="/">All</a>
