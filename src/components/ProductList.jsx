@@ -1,26 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Cards from '../components/Cards'
+import useGetProducts from '../hooks/useGetProducts'
+
 const ProductList = () => {
   
   const API = 'http://api.escuelajs.co/api/v1/products'
-  const [products, setProducts] = useState([])
-  useEffect(async () => {
-    const controller = new AbortController();
-    try {
-      const response = await fetch(API)
-      const data = await response.json()
-      setProducts(data)
-    }catch (err) {
-      console.log('error: '+ err)
-    }
-  return () => controller.abort()
-  }, [])
-
+  const products = useGetProducts(API)
   return (
   <section className="main-container">
     <div className="cards-container">
       {products.map(product => (
-        <Cards />
+        <Cards product = {product} key={product.id} />
       ))}
       
     </div>
