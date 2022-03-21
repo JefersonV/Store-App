@@ -15,7 +15,6 @@ const OrderActions = () => {
       </li>
     </ul>
   </div>
-
   )
 }
 
