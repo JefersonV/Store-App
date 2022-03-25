@@ -9,15 +9,19 @@ import LoginRegister from '../Pages/LoginRegister'
 import Home from '../Pages/Home'
 import Layout from '../containers/Layout'
 import NotFound from '../Pages/NotFound'
-//
 import MyOrders from '../Pages/MyOrders'
 import Orders from '../Pages/Orders'
 import MyAccount from '../Pages/MyAccount'
-//Svg
-// import logoYard from './assets/logos/logo_yard_sale.svg'
-function App() {
+//Context
+import AppContext from '../Context/AppContext'
+//Hooks
+import useInitialState from '../hooks/useInitialState'
 
+const App = () => {
+
+  const InitialState = useInitialState()
   return (
+    <AppContext.Provider value={InitialState}>
       <BrowserRouter>
         <Layout >
           <Routes> 
@@ -33,6 +37,7 @@ function App() {
           </Routes>
         </Layout>
       </BrowserRouter>
+    </AppContext.Provider>
   )
 }
 
